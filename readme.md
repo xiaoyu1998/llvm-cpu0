@@ -1,4 +1,4 @@
-## LLVM_Cpu0:llvm backend development tutorial
+## LLVM_Cpu0
 This repo is fork from https://github.com/Jonathan2251/lbd
 
 the most compile error is you forget to checkout 12.x llvm version as below
