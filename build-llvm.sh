@@ -8,7 +8,7 @@
 # 4. reboot
 
 LLVM_DIR=~/llvm
-LLVM_DEBUG_DIR=${LLVM_DIR}/debug
+LLVM_PROJECT_DIR=${LLVM_DIR}/llvm-project
 LLVM_TEST_DIR=${LLVM_DIR}/test
 
 get_llvm()
@@ -27,19 +27,13 @@ get_llvm()
 
 build_llvm()
 {
-  if ! test -d ${LLVM_DEBUG_DIR}; then
-    mkdir ${LLVM_DEBUG_DIR}
-    cp -rf llvm-project/clang ${LLVM_DEBUG_DIR}
-    cp -rf llvm-project/llvm ${LLVM_DEBUG_DIR}
-#   build compiler-rt for llvm-test-suite
-    cp -rf llvm-project/compiler-rt ${LLVM_DEBUG_DIR}
-    mkdir ${LLVM_DEBUG_DIR}/build
-    pushd ${LLVM_DEBUG_DIR}/build
+  if ! test -d ${LLVM_PROJECT_DIR}/build; then
+    mkdir ${LLVM_PROJECT_DIR}/build
+    pushd ${LLVM_PROJECT_DIR}/build
     OS=`uname -s`
     echo "OS =" ${OS}
     cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang" \
-    -DLLVM_OPTIMIZED_TABLEGEN=On \
-    -DLLVM_PARALLEL_COMPILE_JOBS=4 -DLLVM_PARALLEL_LINK_JOBS=1 -G "Ninja" ../llvm
+    -DLLVM_OPTIMIZED_TABLEGEN=On  -G "Ninja" ../llvm
     time ninja
     popd
   fi
@@ -49,5 +43,5 @@ pushd ${LLVM_DIR}
 #get_llvm
 build_llvm
 popd
-#echo "Please remember to add ${LLVM_DEBUG_DIR}/build/bin to variable \${PATH} to your \
+#echo "Please remember to add ${LLVM_PROJECT_DIR}/llvm-project/build/bin to variable \${PATH} to your \
 #  environment for clang++, clang."
