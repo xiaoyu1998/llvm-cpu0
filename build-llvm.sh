@@ -14,7 +14,7 @@ LLVM_TEST_DIR=${TUTORIAL_DIR}/test
 get_llvm()
 {
   if ! test -d ${TUTORIAL_DIR}/llvm-project; then
-    git clone https://github.com/llvm/llvm-project.git
+    git clone git@github.com:llvm/llvm-project.git --recursive
     cd llvm-project
     git checkout -b 12.x origin/release/12.x
     git checkout e8a397203c67adbeae04763ce25c6a5ae76af52c
