@@ -18,7 +18,7 @@ $ cd $home/tutorial/llvm_cpu0
 $ bash build-cpu0.sh
 ```
 
-The most compile error was caused by forget to checkout llvm version 12.x as below
+The most compile errors was caused by forget to checkout llvm version 12.x as below
 ```
 $ cd $home/tutorial/llvm-project
 $ git checkout -b 12.x origin/release/12.x
