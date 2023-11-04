@@ -40,7 +40,7 @@ build_llvm()
 }
 
 pushd ${TUTORIAL_DIR}
-#get_llvm
+get_llvm
 build_llvm
 popd
 #echo "Please remember to add ${LLVM_PROJECT_DIR}/llvm-project/build/bin to variable \${PATH} to your \
