@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-LLVM_DIR=~/llvm
-LLVM_PROJECT_DIR=${LLVM_DIR}/llvm-project
-LLVM_TEST_DIR=${LLVM_DIR}/test
+TUTORIAL_DIR=~/tutorial
+LLVM_PROJECT_DIR=${TUTORIAL_DIR}/llvm-project
+LLVM_TEST_DIR=${TUTORIAL_DIR}/test
 
 if ! test -d ${LLVM_TEST_DIR}; then
-  mkdir ${LLVM_DIR}/test
+  mkdir ${TUTORIAL_DIR}/test
   pushd ${LLVM_TEST_DIR}
 # ln clang is must since Cpu0 asm boot.cpp and start.h need building clang on 
 # llvm/Cpu0.
