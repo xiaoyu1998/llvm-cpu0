@@ -8,8 +8,8 @@ llvm build steps:
 $ cd $home
 $ mkdir tutorial
 $ cd tutoral
-$ git clone git@github.com:xiaoyu1998/llvm_cpu0.git
-$ cd llvm_cpu0
+$ git clone git@github.com:xiaoyu1998/llvm-cpu0.git
+$ cd llvm-cpu0
 $ bash build-llvm.sh
 ```
 The most llvm compile errors was caused by there is no enough memory to handle parallel complile and link jobs, just reduce jobs or enlarge swapfile.
@@ -19,7 +19,7 @@ Please remember to add "~/tutorial/llvm-project/build/bin" to variable "${PATH}"
 
 Cpu0 build steps(first time):
 ```
-$ cd $home/tutorial/llvm_cpu0
+$ cd $home/tutorial/llvm-cpu0
 $ bash build-cpu0.sh
 ```
 
