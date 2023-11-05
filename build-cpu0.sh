@@ -5,7 +5,7 @@ LLVM_PROJECT_DIR=${TUTORIAL_DIR}/llvm-project
 LLVM_TEST_DIR=${TUTORIAL_DIR}/test
 
 if ! test -d ${LLVM_TEST_DIR}; then
-  mkdir ${TUTORIAL_DIR}/test
+  mkdir ${LLVM_TEST_DIR}
   pushd ${LLVM_TEST_DIR}
 # ln clang is must since Cpu0 asm boot.cpp and start.h need building clang on 
 # llvm/Cpu0.
