@@ -24,7 +24,7 @@ if ! test -d ${LLVM_TEST_DIR}; then
   cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang \
   -DLLVM_TARGETS_TO_BUILD=Cpu0 -DLLVM_ENABLE_PROJECTS="clang" \
   -DLLVM_OPTIMIZED_TABLEGEN=On  \
-  -DLLVM_PARALLEL_COMPILE_JOBS=12 -DLLVM_PARALLEL_LINK_JOBS=2 -G "Ninja" ../llvm
+  -DLLVM_PARALLEL_COMPILE_JOBS=16 -DLLVM_PARALLEL_LINK_JOBS=2 -G "Ninja" ../llvm
   time ninja
 #  -G "Unix Makefiles" ../llvm
 #  time make -j4
