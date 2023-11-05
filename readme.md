@@ -1,4 +1,4 @@
-## llvm_cpu0: llvm backend tutorial
+## llvm-cpu0: llvm backend tutorial
 This repo was fork from https://github.com/Jonathan2251/lbd
 
 Prerequisites:ubuntu/cmake/git/ninja

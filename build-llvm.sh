@@ -34,7 +34,7 @@ build_llvm()
     echo "OS =" ${OS}
     cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang" \
     -DLLVM_OPTIMIZED_TABLEGEN=On \
-    -DLLVM_PARALLEL_COMPILE_JOBS=8 -DLLVM_PARALLEL_LINK_JOBS=1 -G "Ninja" ../llvm
+    -DLLVM_PARALLEL_COMPILE_JOBS=8 -DLLVM_PARALLEL_LINK_JOBS=2 -G "Ninja" ../llvm
     time ninja
     popd
   fi
