@@ -32,9 +32,10 @@ build_llvm()
     pushd ${LLVM_PROJECT_DIR}/build
     OS=`uname -s`
     echo "OS =" ${OS}
-    cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS="clang" \
+    cmake -DCMAKE_BUILD_TYPE=Debug \
+    -DLLVM_TARGETS_TO_BUILD=MIPS -DLLVM_ENABLE_PROJECTS="clang" \
     -DLLVM_OPTIMIZED_TABLEGEN=On \
-    -DLLVM_PARALLEL_COMPILE_JOBS=8 -DLLVM_PARALLEL_LINK_JOBS=2 -G "Ninja" ../llvm
+    -DLLVM_PARALLEL_COMPILE_JOBS=12 -DLLVM_PARALLEL_LINK_JOBS=2 -G "Ninja" ../llvm
     time ninja
     popd
   fi
