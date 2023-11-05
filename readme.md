@@ -7,7 +7,7 @@ llvm build steps:
 ```
 $ cd $home
 $ mkdir tutorial
-$ cd tutoral
+$ cd tutorial
 $ git clone git@github.com:xiaoyu1998/llvm-cpu0.git
 $ cd llvm-cpu0
 $ bash build-llvm.sh
